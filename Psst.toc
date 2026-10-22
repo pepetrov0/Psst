@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Psst!
+## Notes: Whisper me the secret word and I'll invite you. Converts to raid if the party is full.
+## Version: 1.0
+## SavedVariables: PsstDB
+
+Psst.lua
