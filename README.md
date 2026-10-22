@@ -19,6 +19,7 @@ That's it. The word is matched case-insensitively, and repeat whispers from the 
 ## Features
 
 - **Whisper-to-invite** — invites any player who whispers the exact secret word
+- **Funny replies** — every successful invite triggers a random joke whisper back to the invitee (silent on failed invites, so blocked invites don't send anything)
 - **Party → raid conversion** — when your party is full (4/5), Psst! converts to raid and fires the invite once the roster updates
 - **Group-aware** — invites as raid leader or assistant in raids, checks your permissions before acting, and skips players already in your group
 - **Spam protection** — 5-second cooldown per whisperer, self-whispers are ignored
@@ -72,6 +73,16 @@ Settings persist across sessions and reloads.
 
 > [!NOTE]
 > If the party-to-raid conversion doesn't go through within 5 seconds, the pending invite is cancelled and Psst! tells you in chat — you can always `/invite` the player manually.
+
+### Funny replies
+
+Whenever an invite actually goes out, Psst! picks a random joke from a pool of ~100 built-in lines and whispers it back to the person who said the secret word. A few examples:
+
+> "Psst, you said the magic word! Grab water, we're going in."
+> "Welcome! Our motto: wipe first, ask questions later."
+> "Invited! Please don't ask about the smell. It's the warlocks."
+
+The full list lives in the `REPLIES` table at the top of `Psst.lua` — edit it to customize, or add your own lines (one quoted string per line, commas between). Failed invites (cooldown, no permission, already in group) send nothing.
 
 ## Project layout
 
